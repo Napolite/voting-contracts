@@ -6,16 +6,45 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "electionCordinator",
-				"outputs": [
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "age",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "voterID",
+						"type": "string"
+					},
 					{
 						"internalType": "address",
-						"name": "",
+						"name": "voterAddress",
 						"type": "address"
 					}
 				],
-				"stateMutability": "view",
+				"name": "applyToVote",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "confirmApplication",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "giveRgihtToVote",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -32,7 +61,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"register.sol": "Voter"
+			"register.sol": "registerVoter"
 		},
 		"evmVersion": "paris",
 		"libraries": {},

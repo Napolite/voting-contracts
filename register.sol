@@ -2,9 +2,13 @@
 pragma solidity >=0.7.0 <0.9.0;
 
 interface registerVoter{
-    function applyToVote(string name, string age, voterID, ) external;
+    function applyToVote(string calldata name, string calldata age, string calldata voterID, address voterAddress) external;
     function confirmApplication() external;
     function giveRgihtToVote() external;
+}
+
+interface registerAdmin{
+    function applyForAdmin(string calldata name, string calldata electionID, address voterAddress) external;
 }
 
 contract Voter{
@@ -16,9 +20,9 @@ contract Voter{
         bool hasRightToVote;
     }
 
-    struct coordinator{
-        
-    }
+    // struct coordinator{
+
+    // }
 
     address public electionCordinator;
 }

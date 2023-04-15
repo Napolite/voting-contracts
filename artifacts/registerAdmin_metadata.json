@@ -6,16 +6,26 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "electionCordinator",
-				"outputs": [
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "electionID",
+						"type": "string"
+					},
 					{
 						"internalType": "address",
-						"name": "",
+						"name": "voterAddress",
 						"type": "address"
 					}
 				],
-				"stateMutability": "view",
+				"name": "applyForAdmin",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -32,7 +42,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"register.sol": "Voter"
+			"register.sol": "registerAdmin"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
