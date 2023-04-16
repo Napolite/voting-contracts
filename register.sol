@@ -69,6 +69,13 @@ contract Voter{
         return voters[msg.sender];
     }
 
+
+    function confirmApplication() public view returns(bool){
+        return voters[msg.sender].canApplyToVote;
+    }
+
+    
+
     // function applyToVote(string calldata voterID, string calldata electionID) public{
     //     require(voters[msg.sender].canApplyToVote === true, "ID not confirmed")
 
