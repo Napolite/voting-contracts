@@ -20,9 +20,12 @@ contract Voter{
         bool hasRightToVote;
     }
 
-    // struct coordinator{
-
-    // }
+    struct coordinator{
+        string name;
+        string cordID;
+        string electionID;
+        bool adminAuth;
+    }
 
     address public electionCordinator;
 }
