@@ -74,6 +74,10 @@ contract Voter{
         return voters[msg.sender].canApplyToVote;
     }
 
+    function getDetails() public view returns (voter memory){
+        return voters[msg.sender];
+    }
+
     
 
     // function applyToVote(string calldata voterID, string calldata electionID) public{
