@@ -6,21 +6,22 @@ struct voter{
         string name;
         uint age;
         string voterID;
-        bool hasRightToVote;
+        bool canApplyToVote;
+        address voterAddress;
     }
 
-    struct coordinator{
+struct coordinator{
         string name;
         string cordID;
         string electionID;
         bool adminAuth;
+        address voterAddress;
     }
 
 interface registerVoter{
     function registerDetails(string calldata name, uint age) external;
-    function applyToVote(string calldata name, uint age, string calldata voterID, address voterAddress) external;
+    function applyToVote(string calldata voterID, string calldata electionID) external;
     function confirmApplication() external view returns (string memory);
-    function grantRgihtToVote() external;
     function getDetails() external view returns (voter memory);
 }
 
@@ -31,6 +32,14 @@ interface registerAdmin{
     function transferAdminAuth(string calldata electionID, address from, address to,bool isElectionCoord) external;
     function withdrawAdminPrivileges(string calldata electionID, string calldata adminID, bool isElectionCoord) external;
     function isVoter(string calldata voterID) external returns (bool);
+}
+
+interface Admin{
+    function grantRgihtToVote (address voterAddress) external;
+    function grantApplicationRight (address voterAddress) external;
+    function revokeApplication(address voterAddress) external;
+    function blacklistVoter(address voterAddress) external;
+    function whitelistVoter(address voterAddress) external;
 }
 
 
@@ -53,14 +62,18 @@ contract Voter{
 
         string memory voterID = string.concat("NIG",Strings.toString(regCount));
 
-        voters[msg.sender] = voter(name, age, voterID,false);
+        voters[msg.sender] = voter(name, age, voterID,false, msg.sender);
 
         regCount += 1;
 
         return voters[msg.sender];
     }
 
-    // function applyToVote(string calldata name, uint age,)
+    // function applyToVote(string calldata voterID, string calldata electionID) public{
+    //     require(voters[msg.sender].canApplyToVote === true, "ID not confirmed")
+
+        
+    // }
 
 
 }

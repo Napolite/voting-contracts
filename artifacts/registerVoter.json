@@ -49,10 +49,9 @@
 		},
 		"gasEstimates": null,
 		"methodIdentifiers": {
-			"applyToVote(string,uint256,string,address)": "4c1499a6",
+			"applyToVote(string,string)": "bac1d92f",
 			"confirmApplication()": "cfa34208",
 			"getDetails()": "fbbf93a0",
-			"grantRgihtToVote()": "408b53e5",
 			"registerDetails(string,uint256)": "c0264d3a"
 		}
 	},
@@ -61,23 +60,13 @@
 			"inputs": [
 				{
 					"internalType": "string",
-					"name": "name",
-					"type": "string"
-				},
-				{
-					"internalType": "uint256",
-					"name": "age",
-					"type": "uint256"
-				},
-				{
-					"internalType": "string",
 					"name": "voterID",
 					"type": "string"
 				},
 				{
-					"internalType": "address",
-					"name": "voterAddress",
-					"type": "address"
+					"internalType": "string",
+					"name": "electionID",
+					"type": "string"
 				}
 			],
 			"name": "applyToVote",
@@ -121,8 +110,13 @@
 						},
 						{
 							"internalType": "bool",
-							"name": "hasRightToVote",
+							"name": "canApplyToVote",
 							"type": "bool"
+						},
+						{
+							"internalType": "address",
+							"name": "voterAddress",
+							"type": "address"
 						}
 					],
 					"internalType": "struct voter",
@@ -131,13 +125,6 @@
 				}
 			],
 			"stateMutability": "view",
-			"type": "function"
-		},
-		{
-			"inputs": [],
-			"name": "grantRgihtToVote",
-			"outputs": [],
-			"stateMutability": "nonpayable",
 			"type": "function"
 		},
 		{

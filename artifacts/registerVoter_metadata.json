@@ -9,23 +9,13 @@
 				"inputs": [
 					{
 						"internalType": "string",
-						"name": "name",
-						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "age",
-						"type": "uint256"
-					},
-					{
-						"internalType": "string",
 						"name": "voterID",
 						"type": "string"
 					},
 					{
-						"internalType": "address",
-						"name": "voterAddress",
-						"type": "address"
+						"internalType": "string",
+						"name": "electionID",
+						"type": "string"
 					}
 				],
 				"name": "applyToVote",
@@ -69,8 +59,13 @@
 							},
 							{
 								"internalType": "bool",
-								"name": "hasRightToVote",
+								"name": "canApplyToVote",
 								"type": "bool"
+							},
+							{
+								"internalType": "address",
+								"name": "voterAddress",
+								"type": "address"
 							}
 						],
 						"internalType": "struct voter",
@@ -79,13 +74,6 @@
 					}
 				],
 				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "grantRgihtToVote",
-				"outputs": [],
-				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -151,11 +139,11 @@
 			]
 		},
 		"register.sol": {
-			"keccak256": "0x3ae1324f1ea3648521adf4840182e0aa0c887978a3b8f293e71ee00795ff9a33",
+			"keccak256": "0xab5ad508d04cb5a59c60ced1b2afdffcce5a4eff342c86bd659e735706d94600",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://29824e7663c4c941d01a2e9570adcd36335a0fcb3f566fe5288bf4426584cae6",
-				"dweb:/ipfs/QmZ5NB5NHUn2ffTZWxGBMo6nLkiPpmwuc1hfFSE2QGURtF"
+				"bzz-raw://81fdcdc4c39c5dd2c4f416122231837c92d9cf875a8394658139f1ac084bfd61",
+				"dweb:/ipfs/QmXqjzM7PF6mJgTvpyd8MjcGiTbq7QHPncsrDQnJz37N4Z"
 			]
 		}
 	},
