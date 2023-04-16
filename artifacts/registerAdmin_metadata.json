@@ -27,6 +27,89 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "electionID",
+						"type": "string"
+					}
+				],
+				"name": "grantAdminPrivileges",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "electionID",
+						"type": "string"
+					}
+				],
+				"name": "isElectionCoord",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "electionID",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "isElectionCoord",
+						"type": "bool"
+					}
+				],
+				"name": "transferAdminAuth",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "electionID",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "adminID",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "isElectionCoord",
+						"type": "bool"
+					}
+				],
+				"name": "withdrawAdminPrivileges",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -57,11 +140,11 @@
 	},
 	"sources": {
 		"register.sol": {
-			"keccak256": "0xe5af71de05f08d600286713c8c671998085cffe0fd2b810578c5b3c575d467ad",
+			"keccak256": "0x7dbe1b4b1ad11afa99d95bde56b19810cc6947e04543817bfa116017406c2e58",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://f29c07a83fe480a9fa55b49ff5846f2d3d748cc6c27b302ddb9c127c72a450a6",
-				"dweb:/ipfs/QmVT5wm5mgR4h2f3tAFPfTGoM98JhsFywtGpZ96m1Xq4DQ"
+				"bzz-raw://9e71b7abc355ee44793eddceb30e18e92a07dcdd1cf9e97be583104ba8f3cfe2",
+				"dweb:/ipfs/QmdKn2SbKYV3ny3tp4Z3mwFRpawZMTBdNvq9bUrZ8HsVBC"
 			]
 		}
 	},

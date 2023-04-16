@@ -49,7 +49,11 @@
 		},
 		"gasEstimates": null,
 		"methodIdentifiers": {
-			"applyForAdmin(string,string,address)": "00e902be"
+			"applyForAdmin(string,string,address)": "00e902be",
+			"grantAdminPrivileges(string)": "d97a3e51",
+			"isElectionCoord(string)": "96a36b3b",
+			"transferAdminAuth(string,address,address,bool)": "85f5bb56",
+			"withdrawAdminPrivileges(string,string,bool)": "32378274"
 		}
 	},
 	"abi": [
@@ -72,6 +76,89 @@
 				}
 			],
 			"name": "applyForAdmin",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "string",
+					"name": "electionID",
+					"type": "string"
+				}
+			],
+			"name": "grantAdminPrivileges",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "string",
+					"name": "electionID",
+					"type": "string"
+				}
+			],
+			"name": "isElectionCoord",
+			"outputs": [
+				{
+					"internalType": "bool",
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "string",
+					"name": "electionID",
+					"type": "string"
+				},
+				{
+					"internalType": "address",
+					"name": "from",
+					"type": "address"
+				},
+				{
+					"internalType": "address",
+					"name": "to",
+					"type": "address"
+				},
+				{
+					"internalType": "bool",
+					"name": "isElectionCoord",
+					"type": "bool"
+				}
+			],
+			"name": "transferAdminAuth",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "string",
+					"name": "electionID",
+					"type": "string"
+				},
+				{
+					"internalType": "string",
+					"name": "adminID",
+					"type": "string"
+				},
+				{
+					"internalType": "bool",
+					"name": "isElectionCoord",
+					"type": "bool"
+				}
+			],
+			"name": "withdrawAdminPrivileges",
 			"outputs": [],
 			"stateMutability": "nonpayable",
 			"type": "function"

@@ -9,6 +9,10 @@ interface registerVoter{
 
 interface registerAdmin{
     function applyForAdmin(string calldata name, string calldata electionID, address voterAddress) external;
+    function isElectionCoord(string calldata electionID) external view returns (bool);
+    function grantAdminPrivileges(string calldata electionID) external;
+    function transferAdminAuth(string calldata electionID, address from, address to,bool isElectionCoord) external;
+    function withdrawAdminPrivileges(string calldata electionID, string calldata adminID, bool isElectionCoord) external;
 }
 
 contract Voter{
