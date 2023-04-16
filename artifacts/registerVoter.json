@@ -51,7 +51,8 @@
 		"methodIdentifiers": {
 			"applyToVote(string,uint256,string,address)": "4c1499a6",
 			"confirmApplication()": "cfa34208",
-			"giveRgihtToVote()": "d5d40064",
+			"getDetails()": "fbbf93a0",
+			"grantRgihtToVote()": "408b53e5",
 			"registerDetails(string,uint256)": "c0264d3a"
 		}
 	},
@@ -87,13 +88,54 @@
 		{
 			"inputs": [],
 			"name": "confirmApplication",
-			"outputs": [],
-			"stateMutability": "nonpayable",
+			"outputs": [
+				{
+					"internalType": "string",
+					"name": "",
+					"type": "string"
+				}
+			],
+			"stateMutability": "view",
 			"type": "function"
 		},
 		{
 			"inputs": [],
-			"name": "giveRgihtToVote",
+			"name": "getDetails",
+			"outputs": [
+				{
+					"components": [
+						{
+							"internalType": "string",
+							"name": "name",
+							"type": "string"
+						},
+						{
+							"internalType": "uint256",
+							"name": "age",
+							"type": "uint256"
+						},
+						{
+							"internalType": "string",
+							"name": "voterID",
+							"type": "string"
+						},
+						{
+							"internalType": "bool",
+							"name": "hasRightToVote",
+							"type": "bool"
+						}
+					],
+					"internalType": "struct voter",
+					"name": "",
+					"type": "tuple"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "grantRgihtToVote",
 			"outputs": [],
 			"stateMutability": "nonpayable",
 			"type": "function"
