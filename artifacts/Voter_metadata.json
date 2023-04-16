@@ -7,12 +7,82 @@
 		"abi": [
 			{
 				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "contractOwner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "electionCordinator",
 				"outputs": [
 					{
 						"internalType": "address",
 						"name": "",
 						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "age",
+						"type": "uint256"
+					}
+				],
+				"name": "registerVoter",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "voters",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "age",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "voterID",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "hasRightToVote",
+						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
@@ -47,11 +117,11 @@
 	},
 	"sources": {
 		"register.sol": {
-			"keccak256": "0x7dbe1b4b1ad11afa99d95bde56b19810cc6947e04543817bfa116017406c2e58",
+			"keccak256": "0xa79cd64867cdbc1f03444ee401a589d4a8a0d14f6db482d192df79cfc68d5c4e",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://9e71b7abc355ee44793eddceb30e18e92a07dcdd1cf9e97be583104ba8f3cfe2",
-				"dweb:/ipfs/QmdKn2SbKYV3ny3tp4Z3mwFRpawZMTBdNvq9bUrZ8HsVBC"
+				"bzz-raw://2448820de19162c5a2ddb806f15b7dc5e73e21d5ddd5d8ccf90b83d9799b68e4",
+				"dweb:/ipfs/QmVW3vR1UKdmKEoG6b4a6uKckarEcz66xPTwPECae6frFu"
 			]
 		}
 	},

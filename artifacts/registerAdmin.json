@@ -52,6 +52,7 @@
 			"applyForAdmin(string,string,address)": "00e902be",
 			"grantAdminPrivileges(string)": "d97a3e51",
 			"isElectionCoord(string)": "96a36b3b",
+			"isVoter(string)": "1f3d99f8",
 			"transferAdminAuth(string,address,address,bool)": "85f5bb56",
 			"withdrawAdminPrivileges(string,string,bool)": "32378274"
 		}
@@ -110,6 +111,25 @@
 				}
 			],
 			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "string",
+					"name": "voterID",
+					"type": "string"
+				}
+			],
+			"name": "isVoter",
+			"outputs": [
+				{
+					"internalType": "bool",
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"stateMutability": "nonpayable",
 			"type": "function"
 		},
 		{

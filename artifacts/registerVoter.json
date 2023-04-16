@@ -49,9 +49,10 @@
 		},
 		"gasEstimates": null,
 		"methodIdentifiers": {
-			"applyToVote(string,string,string,address)": "ac6d751a",
+			"applyToVote(string,uint256,string,address)": "4c1499a6",
 			"confirmApplication()": "cfa34208",
-			"giveRgihtToVote()": "d5d40064"
+			"giveRgihtToVote()": "d5d40064",
+			"registerDetails(string,uint256)": "c0264d3a"
 		}
 	},
 	"abi": [
@@ -63,9 +64,9 @@
 					"type": "string"
 				},
 				{
-					"internalType": "string",
+					"internalType": "uint256",
 					"name": "age",
-					"type": "string"
+					"type": "uint256"
 				},
 				{
 					"internalType": "string",
@@ -93,6 +94,24 @@
 		{
 			"inputs": [],
 			"name": "giveRgihtToVote",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "string",
+					"name": "name",
+					"type": "string"
+				},
+				{
+					"internalType": "uint256",
+					"name": "age",
+					"type": "uint256"
+				}
+			],
+			"name": "registerDetails",
 			"outputs": [],
 			"stateMutability": "nonpayable",
 			"type": "function"
