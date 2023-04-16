@@ -43,7 +43,7 @@ contract Voter{
         contractOwner = msg.sender;
     }
 
-    function registerVoter(string calldata name, uint age) public{
+    function registerDetails(string calldata name, uint age) public{
         require(age > 18, "not eligible to vote");
 
         voters[msg.sender] = voter(name, age, "",false);
