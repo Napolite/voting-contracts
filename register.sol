@@ -50,10 +50,17 @@ contract Voter{
     address public contractOwner;
     uint regCount;
     mapping( address => voter) public voters;
+    mapping(address => coordinator) public coordinators;
+    
 
     constructor(){ 
         contractOwner = msg.sender;
         regCount = 1;
+    }
+
+    modifier isAdmin{
+        require (coordinators[msg.sender].adminAuth == true);
+         _;
     }
 
     function registerDetails(string calldata name, uint age) public returns (voter memory) {
@@ -77,6 +84,8 @@ contract Voter{
     function getDetails() public view returns (voter memory){
         return voters[msg.sender];
     }
+    
+    // function 
 
     
 
