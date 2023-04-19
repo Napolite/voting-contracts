@@ -49,31 +49,12 @@
 		},
 		"gasEstimates": null,
 		"methodIdentifiers": {
-			"applyToVote(string,string)": "bac1d92f",
 			"confirmApplication()": "cfa34208",
 			"getDetails()": "fbbf93a0",
 			"registerDetails(string,uint256)": "c0264d3a"
 		}
 	},
 	"abi": [
-		{
-			"inputs": [
-				{
-					"internalType": "string",
-					"name": "voterID",
-					"type": "string"
-				},
-				{
-					"internalType": "string",
-					"name": "electionID",
-					"type": "string"
-				}
-			],
-			"name": "applyToVote",
-			"outputs": [],
-			"stateMutability": "nonpayable",
-			"type": "function"
-		},
 		{
 			"inputs": [],
 			"name": "confirmApplication",

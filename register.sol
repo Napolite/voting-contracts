@@ -20,7 +20,6 @@ struct coordinator{
 
 interface registerVoter{
     function registerDetails(string calldata name, uint age) external;
-    function applyToVote(string calldata voterID, string calldata electionID) external;
     function confirmApplication() external view returns (string memory);
     function getDetails() external view returns (voter memory);
 }
@@ -58,14 +57,14 @@ contract Voter{
         regCount = 1;
     }
 
-    modifier isAdmin{
+    modifier onlyAdmin{
         require (coordinators[msg.sender].adminAuth == true);
          _;
     }
 
     function registerDetails(string calldata name, uint age) public returns (voter memory) {
         require(age > 17, "not eligible to vote");
-        require(voters[msg.sender].age == 0, "This address has been registered");
+        require(bytes(voters[msg.sender].voterID).length == 0, "This address has been registered");
 
         string memory voterID = string.concat("NIG",Strings.toString(regCount));
 
@@ -84,16 +83,8 @@ contract Voter{
     function getDetails() public view returns (voter memory){
         return voters[msg.sender];
     }
-    
-    // function 
 
-    
-
-    // function applyToVote(string calldata voterID, string calldata electionID) public{
-    //     require(voters[msg.sender].canApplyToVote === true, "ID not confirmed")
-
-        
-    // }
+    // function applyForAdmin(string calldata name, str)
 
 
 }
