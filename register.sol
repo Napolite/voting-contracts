@@ -97,7 +97,12 @@ contract Voter is registerVoter{
         return keccak256(abi.encodePacked(coordinators[cordAddr].electionID)) == keccak256(abi.encodePacked(electionID));
     }
 
-   
+     function grantAdminPrivileges(string calldata electionID, address cordAddr) public onlyAdmin{
+        require(bytes(coordinators[cordAddr].cordID).length != 0, "this address is not a coordinator");
+        require(coordinators[cordAddr].adminAuth != true, "This user is an admin");
+        require(keccak256(abi.encodePacked(coordinators[cordAddr].electionID)) !=keccak256(abi.encodePacked(electionID) ), "This user has admin rights to this election");
 
-
+        coordinators[cordAddr].electionID = electionID;
+        coordinators[cordAddr].adminAuth = true;
+    }
 }
