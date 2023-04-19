@@ -60,9 +60,9 @@
 			"name": "confirmApplication",
 			"outputs": [
 				{
-					"internalType": "string",
+					"internalType": "bool",
 					"name": "",
-					"type": "string"
+					"type": "bool"
 				}
 			],
 			"stateMutability": "view",
@@ -122,7 +122,40 @@
 				}
 			],
 			"name": "registerDetails",
-			"outputs": [],
+			"outputs": [
+				{
+					"components": [
+						{
+							"internalType": "string",
+							"name": "name",
+							"type": "string"
+						},
+						{
+							"internalType": "uint256",
+							"name": "age",
+							"type": "uint256"
+						},
+						{
+							"internalType": "string",
+							"name": "voterID",
+							"type": "string"
+						},
+						{
+							"internalType": "bool",
+							"name": "canApplyToVote",
+							"type": "bool"
+						},
+						{
+							"internalType": "address",
+							"name": "voterAddress",
+							"type": "address"
+						}
+					],
+					"internalType": "struct voter",
+					"name": "",
+					"type": "tuple"
+				}
+			],
 			"stateMutability": "nonpayable",
 			"type": "function"
 		}

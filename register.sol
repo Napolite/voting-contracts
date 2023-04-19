@@ -19,8 +19,8 @@ struct coordinator{
     }
 
 interface registerVoter{
-    function registerDetails(string calldata name, uint age) external;
-    function confirmApplication() external view returns (string memory);
+    function registerDetails(string calldata name, uint age) external returns(voter memory);
+    function confirmApplication() external view returns (bool);
     function getDetails() external view returns (voter memory);
 }
 
@@ -43,7 +43,7 @@ interface Admin{
 
 
 
-contract Voter{
+contract Voter is registerVoter{
 
     address public electionCordinator;
     address public contractOwner;
@@ -84,7 +84,9 @@ contract Voter{
         return voters[msg.sender];
     }
 
-    // function applyForAdmin(string calldata name, str)
+    // function applyForAdmin(string calldata name, string calldata){
+
+    // }
 
 
 }

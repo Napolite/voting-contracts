@@ -115,11 +115,11 @@
 			]
 		},
 		"register.sol": {
-			"keccak256": "0x2d7308bfbd3fa975cd269a5c2eb6bbccab3e844731553faf2a2fcb09f4431c89",
+			"keccak256": "0x399a537cb8ad68158fe19636e3476b2b0b62d9f93b5706f99bd346843ea96a0c",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://ed302517ddf493303f1d0f3c24ee6886b335a44d0aa1ca64250537b13a031d19",
-				"dweb:/ipfs/QmPuXtN38xGTewQixMGVurWz6DArYWqGxtWjy3GcnympB2"
+				"bzz-raw://dc97e138677b8b0576a84fd8680f9ce8d3e37eda723f2298b0e3663bbed9fceb",
+				"dweb:/ipfs/QmSEpdFQEsBVEBzwFw6L3aFzYxbhooMh9kMkNbkNijZxih"
 			]
 		}
 	},
