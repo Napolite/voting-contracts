@@ -84,26 +84,20 @@ contract Voter is registerVoter{
         return voters[msg.sender];
     }
 
-    function applyForAdmin(string calldata name, string calldata electionID) public{
+    function applyForAdmin(string calldata name) public{
         require(bytes(coordinators[msg.sender].cordID).length == 0, "This address is an admin");
         require(bytes(voters[msg.sender].voterID).length != 0, "This address has mot been registered in the electoral process");
 
         string memory cordID = string.concat("COD",Strings.toString(regCount));
         voters[msg.sender].voterID = '';
-        coordinators[msg.sender]= coordinator(name,cordID,electionID,false, msg.sender );
+        coordinators[msg.sender]= coordinator(name,cordID,"",false, msg.sender );
     }
 
     function isElectionCoord(string calldata electionID, address cordAddr) public view returns(bool){
         return keccak256(abi.encodePacked(coordinators[cordAddr].electionID)) == keccak256(abi.encodePacked(electionID));
     }
 
-    function grantAdminPrivileges(string calldata electionID, address cordAddr) public onlyAdmin{
-        require(bytes(coordinators[cordAddr].cordID).length != 0, "this address is not a coordinator");
-        require(coordinators[cordAddr].adminAuth != false, "This user is not an admin");
-        require(keccak256(abi.encodePacked(coordinators[cordAddr].electionID)) !=keccak256(abi.encodePacked(electionID) ), "This user has admin rights to this election");
-
-        // coordinators[cordAddr].
-    }
+   
 
 
 }
