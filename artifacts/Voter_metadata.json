@@ -150,6 +150,30 @@
 				"inputs": [
 					{
 						"internalType": "string",
+						"name": "electionID",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "cordAddr",
+						"type": "address"
+					}
+				],
+				"name": "isElectionCoord",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
 						"name": "name",
 						"type": "string"
 					},
@@ -281,11 +305,11 @@
 			]
 		},
 		"register.sol": {
-			"keccak256": "0x312c0169b47740fce4bbcbe8cfceaf55da6ada4d300869ae1b67382b8d7c716a",
+			"keccak256": "0x689e21203c4f788eb7e6a7f942d5036ebddc6d2b0ce93ca43b0297759685ed93",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://e17ea6fb5b12cb59ae4801540957b9bdd109a85ad826f23d37a4d3a4dcce43ff",
-				"dweb:/ipfs/Qmf7PeYjV7XfDwWixNcvoE9UL99RkTeVmy4bUenJcvmfVF"
+				"bzz-raw://83de4e6a607401272ef4ae72f295f588790ce85d400664a3307d2d50b37bd1e4",
+				"dweb:/ipfs/QmNWmSm35Wuswy1LDypsnA8R7zRWmtfe8DGL2LV7VonYgP"
 			]
 		}
 	},

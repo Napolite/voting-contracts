@@ -93,5 +93,11 @@ contract Voter is registerVoter{
         coordinators[msg.sender]= coordinator(name,cordID,electionID,false, msg.sender );
     }
 
+    function isElectionCoord(string calldata electionID, address cordAddr) public view returns(bool){
+        return keccak256(abi.encodePacked(coordinators[cordAddr].electionID)) == keccak256(abi.encodePacked(electionID));
+    }
+
+    
+
 
 }
