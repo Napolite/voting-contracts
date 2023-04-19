@@ -49,7 +49,7 @@
 		},
 		"gasEstimates": null,
 		"methodIdentifiers": {
-			"applyForAdmin(string,string,address)": "00e902be",
+			"applyForAdmin(string,string)": "8bc8d6ff",
 			"grantAdminPrivileges(string)": "d97a3e51",
 			"isElectionCoord(string)": "96a36b3b",
 			"isVoter(string)": "1f3d99f8",
@@ -69,11 +69,6 @@
 					"internalType": "string",
 					"name": "electionID",
 					"type": "string"
-				},
-				{
-					"internalType": "address",
-					"name": "voterAddress",
-					"type": "address"
 				}
 			],
 			"name": "applyForAdmin",
