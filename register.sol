@@ -102,7 +102,7 @@ contract Voter is registerVoter{
         require(coordinators[cordAddr].adminAuth != false, "This user is not an admin");
         require(keccak256(abi.encodePacked(coordinators[cordAddr].electionID)) !=keccak256(abi.encodePacked(electionID) ), "This user has admin rights to this election");
 
-        coordinators[cordAddr].
+        // coordinators[cordAddr].
     }
 
 
