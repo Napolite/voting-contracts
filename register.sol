@@ -30,7 +30,6 @@ interface registerAdmin{
     function grantAdminPrivileges(string calldata electionID, address cordAddr) external;
     function transferAdminAuth(string calldata electionID, address from, address to,bool isElectionCoord) external;
     function withdrawAdminPrivileges(string calldata electionID, string calldata adminID, bool isElectionCoord) external;
-    function isVoter(string calldata voterID) external returns (bool);
 }
 
 interface Admin{

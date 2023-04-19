@@ -64,25 +64,6 @@
 				"inputs": [
 					{
 						"internalType": "string",
-						"name": "voterID",
-						"type": "string"
-					}
-				],
-				"name": "isVoter",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "string",
 						"name": "electionID",
 						"type": "string"
 					},
@@ -175,11 +156,11 @@
 			]
 		},
 		"register.sol": {
-			"keccak256": "0x05d2d634b4085933f8ca08768b653a557c9c72b2f398b81d5026b2da81add18c",
+			"keccak256": "0x00278dcc2a245d3f1f49c8756d3dcba07e832f61e02908b32b5094de38b7588a",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://280570d56b25fe582ab359fb528ee51b63c3b3bbba5fcdb24ca2158794170be7",
-				"dweb:/ipfs/QmeKA6kHinHASELNeTzy54TfM5HCNaAwfcEg29AMbdJuJB"
+				"bzz-raw://d9b4abf3e2d6c1724a73beb6ca91dc046d52121819aa487a55e61c7269d1ef37",
+				"dweb:/ipfs/QmY5Ag72Gnx4r4c1FzrABoCpV1uFhPzeWRQ8EoEbXYpkxc"
 			]
 		}
 	},
