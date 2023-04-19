@@ -27,7 +27,7 @@ interface registerVoter{
 interface registerAdmin{
     function applyForAdmin(string calldata name, string calldata electionID) external;
     function isElectionCoord(string calldata electionID) external view returns (bool);
-    function grantAdminPrivileges(string calldata electionID) external;
+    function grantAdminPrivileges(string calldata electionID, address cordAddr) external;
     function transferAdminAuth(string calldata electionID, address from, address to,bool isElectionCoord) external;
     function withdrawAdminPrivileges(string calldata electionID, string calldata adminID, bool isElectionCoord) external;
     function isVoter(string calldata voterID) external returns (bool);
@@ -97,7 +97,13 @@ contract Voter is registerVoter{
         return keccak256(abi.encodePacked(coordinators[cordAddr].electionID)) == keccak256(abi.encodePacked(electionID));
     }
 
-    
+    function grantAdminPrivileges(string calldata electionID, address cordAddr) public onlyAdmin{
+        require(bytes(coordinators[cordAddr].cordID).length != 0, "this address is not a coordinator");
+        require(coordinators[cordAddr].adminAuth != false, "This user is not an admin");
+        require(keccak256(abi.encodePacked(coordinators[cordAddr].electionID)) !=keccak256(abi.encodePacked(electionID) ), "This user has admin rights to this election");
+
+        coordinators[cordAddr].
+    }
 
 
 }

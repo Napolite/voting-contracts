@@ -29,6 +29,11 @@
 						"internalType": "string",
 						"name": "electionID",
 						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "cordAddr",
+						"type": "address"
 					}
 				],
 				"name": "grantAdminPrivileges",
@@ -170,11 +175,11 @@
 			]
 		},
 		"register.sol": {
-			"keccak256": "0x689e21203c4f788eb7e6a7f942d5036ebddc6d2b0ce93ca43b0297759685ed93",
+			"keccak256": "0x7ab8bee0274a25ec96d66bebeb0f2239c018f24e52f9d33eb696564db74d14e4",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://83de4e6a607401272ef4ae72f295f588790ce85d400664a3307d2d50b37bd1e4",
-				"dweb:/ipfs/QmNWmSm35Wuswy1LDypsnA8R7zRWmtfe8DGL2LV7VonYgP"
+				"bzz-raw://b3954b4215c2119085102136ccff244f3ed6cb2d12d71ebf8d09de47656bd939",
+				"dweb:/ipfs/Qmbc5tibZxboKtPP2GTgDmub4gF9mt4UE6U2VRyRZmRoaY"
 			]
 		}
 	},

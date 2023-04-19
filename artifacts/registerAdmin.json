@@ -50,7 +50,7 @@
 		"gasEstimates": null,
 		"methodIdentifiers": {
 			"applyForAdmin(string,string)": "8bc8d6ff",
-			"grantAdminPrivileges(string)": "d97a3e51",
+			"grantAdminPrivileges(string,address)": "74775fae",
 			"isElectionCoord(string)": "96a36b3b",
 			"isVoter(string)": "1f3d99f8",
 			"transferAdminAuth(string,address,address,bool)": "85f5bb56",
@@ -82,6 +82,11 @@
 					"internalType": "string",
 					"name": "electionID",
 					"type": "string"
+				},
+				{
+					"internalType": "address",
+					"name": "cordAddr",
+					"type": "address"
 				}
 			],
 			"name": "grantAdminPrivileges",
